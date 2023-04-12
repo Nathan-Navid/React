@@ -5,6 +5,7 @@ function App() {
     <div className="App">
       <h1>Hello Dojo!</h1>
       <h2>Things I need to do:</h2>
+      <hr/>
       <ul>
         <li>Learn React</li>
         <li>Climb Mt. Everest</li>
