@@ -37,21 +37,23 @@
   }
 }
 .view{
-  text-align: left;
-  text-indent: 22cm;
-  margin-top: 20px;
+
+  text-align: center;
+
 }
 .form-group{
   display: flex;
   align-items: baseline;
   margin-top: 20px;
   padding: 5px;
-  background-color: gray;
+  background-color: black;
   border-radius: 5px;
 }
 .initial{
-  color: white;
+  color: goldenrod;
+  font-weight: bold;
   text-align: start;
+  margin-left: 15px;
 }
 .form{
   margin-top: 25px;
