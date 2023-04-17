@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.view{
+  text-align: left;
+  text-indent: 22cm;
+  margin-top: 20px;
+}
+.form-group{
+  display: flex;
+  align-items: baseline;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: gray;
+  border-radius: 5px;
+}
+.initial{
+  color: white;
+  text-align: start;
+}
+.form{
+  margin-top: 25px;
+}
