@@ -26,8 +26,8 @@ const From = () => {
     })
 
     const [emailError, setEmailError] = useState("")
-    const [passError, setPassError] = useState("")
-    const [matchPass, setMatchPass] = useState("")
+    // const [passError, setPassError] = useState("")
+    // const [matchPass, setMatchPass] = useState("")
     // const handleTitle = (e) => {
     //     setTitle(e.target.value);
     //     if(e.target.value.length < 1) {
@@ -39,14 +39,14 @@ const From = () => {
     //         setTitleError("");
     //     }
     // }
-    const passValidation = (password) => {
-        if (!passwordPattern.test(password)) {
-            setPassError("Please enter a valid Password & must be 5 charactors")
-        }
-        else {
-            setPassError("")
-        }
-    }
+    // const passValidation = (password) => {
+    //     if (!passwordPattern.test(password)) {
+    //         setPassError("Please enter a valid Password & must be 5 charactors")
+    //     }
+    //     else {
+    //         setPassError("")
+    //     }
+    // }
 
     const emailValidation = (email) => {
         if (!emailPattern.test(email)) {
@@ -65,10 +65,10 @@ const From = () => {
         }
         //pass.value -->confirm match with pass
         //math--> show Matched
-        if (e.target.name === "password" || e.target.name === "confirmPassword") {
-            passValidation(e.target.value)
+        // if (e.target.name === "password" || e.target.name === "confirmPassword") {
+        //     passValidation(e.target.value)
 
-        }
+        // }
 
     }
     return (
@@ -80,7 +80,7 @@ const From = () => {
                         <input type="text" name='firstName' className="form-control" onChange={changeHandler} />
                     </div>
                     <div className='text-danger'>
-                        {user.firstName.length < 2 ? <p>*** First Name must be at least 2 charactors ***</p> : ""}
+                        {user.firstName && user.firstName.length < 2 ? <p>*** First Name must be at least 2 charactors ***</p> : ""}
                     </div>
 
                 </div>
@@ -90,7 +90,7 @@ const From = () => {
                         <input type="text" name='lastName' className="form-control" onChange={changeHandler} />
                     </div>
                     <div className='text-danger'>
-                        {user.lastName.length < 2 ? <p>*** Last Name must be at least 2 charactors ***</p> : ""}
+                        {user.lastName && user.lastName.length < 2 ? <p>*** Last Name must be at least 2 charactors ***</p> : ""}
                     </div>
                 </div>
                 <div className="group">
@@ -110,7 +110,7 @@ const From = () => {
                         <input type="password" name='password' className="form-control" onChange={changeHandler} />
                     </div>
                     <div className='text-danger'>
-                        {user.password.length < 8 ? <p>*** Password must be at least 8 charactors ***</p> : ""}
+                        {user.password && user.password.length < 8 ? <p>*** Password must be at least 8 charactors ***</p> : ""}
                     </div>
                 </div>
                 <div className="group">
@@ -119,7 +119,7 @@ const From = () => {
                         <input type="password" name='confirmPassword' className="form-control" onChange={changeHandler} /><br />
                     </div>
                     <div className='text-danger'>
-                        {user.confirmPassword.length < 8 || user.confirmPassword !== user.password ? <p>*** Password must be at least 8 charactors or not matched ***</p> : ""}
+                        {user.confirmPassword && user.confirmPassword.length < 8 || user.confirmPassword !== user.password ? <p>*** Password must be at least 8 charactors or not matched ***</p> : ""}
                     </div>
                 </div>
             </form>
@@ -128,7 +128,7 @@ const From = () => {
                 <p>First Name: <strong>{user.firstName}</strong></p>
                 <p>Last Name: <strong>{user.lastName}</strong></p>
                 <p>Email: <strong>{user.email}</strong></p>
-                <p>Password and confirm password: {user.confirmPassword === user.password ? <p> <strong>MATCHED</strong></p> : ""}
+                <p>Password and confirm password: {user.confirmPassword && user.password !== "" && user.confirmPassword === user.password ? <p> <strong>MATCHED</strong></p> : ""}
                 </p>
 
             </div>
