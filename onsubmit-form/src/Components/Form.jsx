@@ -78,8 +78,8 @@ const From = () => {
     }
     
     return (
-        <div className="container">
-            <form action="" className="form col-md-6 offset-3" onSubmit={submitHandler}>
+        <div className="container d-flex justify-content-between">
+            <form action="" className="form col-md-6 offset-1" onSubmit={submitHandler}>
                 <h2>Create Your Form</h2>
                 <div className="group" >
                     <div className='form-group'>
@@ -133,13 +133,26 @@ const From = () => {
                     <input type="submit" value="Create user" className='btn btn-success text-black' />
                 </div>
             </form>
-            <div className="view">
+            <div className="view mt-5">
                 <h3>Your Form Data </h3>
-                <p>First Name: <strong>{user.firstName}</strong></p>
+                
+                <ul>
+                    {
+                        allUsers.map((user, i)=>
+                        <li key={i}>{user.firstName} ,{user.lastName} -- {user.email} </li>)
+                    }
+                </ul>
+
+
+
+
+
+
+                {/* <p>First Name: <strong>{user.firstName}</strong></p>
                 <p>Last Name: <strong>{user.lastName}</strong></p>
                 <p>Email: <strong>{user.email}</strong></p>
                 <p>Password & Confirm-Password: {user.confirmPassword && user.password !== "" && user.confirmPassword === user.password ? <p> <strong>MATCHED</strong></p> : ""}
-                </p>
+                </p> */}
 
             </div>
         </div>
