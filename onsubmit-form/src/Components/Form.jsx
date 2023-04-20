@@ -136,6 +136,23 @@ const From = () => {
             <div className="view mt-5">
                 <h3>Your Form Data </h3>
                 
+                {/* <table className='table col-6'>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {
+                                allUsers.map((user, i)=>
+                                <td key={i}>{user[i]}</td>)
+                            }
+                        </tr>
+                    </tbody>
+                </table> */}
                 <ul>
                     {
                         allUsers.map((user, i)=>
