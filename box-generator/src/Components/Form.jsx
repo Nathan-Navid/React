@@ -17,11 +17,11 @@ const HandleChange = (e) =>{
   return (
     <div>
         <form onSubmit={submitHandler}>
-        <div>
-            <label htmlFor="firstName">Color: </label>
-            <input type="text" name="color" onChange={HandleChange}/>
-        </div>
-        <button className='btn btn-success mt-3'>Add Color</button>
+            <div>
+                <label htmlFor="firstName">Color: </label>
+                <input type="text" name="color" onChange={HandleChange}/>
+            </div>
+            <button className='btn btn-success mt-3'>Add Color</button>
         </form>
 
     </div>
