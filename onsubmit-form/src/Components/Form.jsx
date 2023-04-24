@@ -147,8 +147,14 @@ const From = () => {
                     <tbody>
                         <tr>
                             {
-                                allUsers.map((user, i)=>
-                                <td key={i}>{user[i]}</td>)
+                                allUsers.map((user, i)=> {
+                                    return(
+                                            <td key={i}>{user.firstName}</td>
+
+                                    )
+                                }
+
+                                )
                             }
                         </tr>
                     </tbody>
