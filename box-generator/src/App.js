@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       <h1>Standard Assignment</h1>
-        <Form boxColorArray={ boxColorArray } setBoxColorArray={setBoxColorArray}/>
-        <Display boxColorArray={ boxColorArray } />
+        <Form boxColorArray={boxColorArray} setBoxColorArray={setBoxColorArray}/>
+        <Display boxColorArray={boxColorArray}/>
       <hr />
       <h1>Ninja Assignment</h1>
         <NinjaForm ninjaBoxArray={ ninjaBoxArray } setNinjaBoxArray={setNinjaBoxArray}/>
