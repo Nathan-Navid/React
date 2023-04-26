@@ -10,7 +10,6 @@ e.preventDefault();
     //    we need to create a new array and spread out the current values first
     //    then we add the new color as the last element in the array
     setBoxColorArray( [ ...boxColorArray, color ] );
-    setColor("")
 }
 const HandleChange = (e) =>{
     setColor(e.target.value)
