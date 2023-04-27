@@ -38,7 +38,9 @@ return (
                 <div className= {styled(todo.markedDelete)} key={i}>
                     <p>{todo.Key}</p>
                     <input onChange={(e)=>handleDelete(todo)} type="checkbox" />
-                    <button className='btn btn-danger' onClick={(e)=>deleteButton(todo.id)}>Delete</button>
+                    <button className='btn btn-danger' onClick={(e)=>deleteButton(todo.id)}>
+                        Delete Task
+                    </button>
                 </div>
             ))
         }
